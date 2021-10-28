@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+auth()->loginUsingId(1);
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,3 +22,7 @@ Route::get('/', function () {
 Route::get('/gigs/create', '\App\Http\Controllers\GigController@create');
 // Add gig to database
 Route::post('/gigs', '\App\Http\Controllers\GigController@store');
+
+Route::get('/gigs', function () {
+    echo "<h1> All gigs page </h1>";
+})->name('gigs');
