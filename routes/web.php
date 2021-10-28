@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// auth()->loginUsingId(1);
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +22,7 @@ Route::get('/', function () {
 Route::get('/gigs/create', '\App\Http\Controllers\GigController@create');
 
 Route::get('/gigs', 'GigController@store');
+
+Route::get('/gigs', function () {
+    return '<h1> All gigs page</h1>';
+});
