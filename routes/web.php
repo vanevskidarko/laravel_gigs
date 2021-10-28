@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/gigs/create', '\App\Http\Controllers\GigController@create');
+
+Route::get('/gigs', 'GigController@store');
