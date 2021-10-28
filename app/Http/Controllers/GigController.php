@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Gig;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Gig;
+
+
 
 class GigController extends Controller
 {
