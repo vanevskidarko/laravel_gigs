@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 
-auth()->loginUsingId(1);
+Auth::loginUsingId(1);
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,6 +28,6 @@ Route::get('/', function () {
 
 Route::get('/gigs/create', [GigController::class, 'create']);
 Route::post('/gigs', [GigController::class, 'store']);
-Route::get('/gigs/gigs', function () {
+Route::get('/gigs', function () {
     echo "<h1> All gigs page </h1>";
-});
+})->name('gigs');

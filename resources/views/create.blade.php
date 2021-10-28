@@ -3,8 +3,18 @@
 
 <div class="col-md-7 col-lg-8">
     <h4 class="mb-3">Create a gig</h4>
-@csrf
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
     <form class="needs-validation" novalidate action="gigs" method="POST">
+@csrf
+
       <div class="row g-3">
         <div class="col-sm-6">
           <label for="name" class="form-label">Name</label>

@@ -26,7 +26,7 @@ class GigController extends Controller
         //save to database
         Gig::create(['name' => request('name'), 'band_name' => request('band_name'), 'artist_id' => auth()->user()->id, 'genre' => request('genre')]);
 
-        return redirect()->route('');
-        //redirect
+        return redirect()->route('gigs');
+        // redirect
     }
 }
