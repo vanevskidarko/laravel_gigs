@@ -3,6 +3,7 @@
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GigController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,18 @@ use App\Http\Controllers\GigController;
 |
 */
 
+
+auth()->loginUsingId(1);
+
 Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
 Route::get('/gigs/create', [GigController::class, 'create']);
 Route::post('/gigs', [GigController::class, 'store']);
+Route::get('/gigs/gigs', function () {
+    echo "<h1> All gigs page </h1>";
+});
