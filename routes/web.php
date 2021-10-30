@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
- auth()->loginUsingId(1);
-
+Auth::loginUsingId(5);
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,3 +23,5 @@ Route::get('/gigs/create', '\App\Http\Controllers\GigController@create');
 Route::post('/gigs', '\App\Http\Controllers\GigController@store');
 
 Route::get('/gigs', '\App\Http\Controllers\GigController@index')->name('gigs');
+
+Route::post('/handle','\App\Http\Controllers\AttendanceController@handle');
