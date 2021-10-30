@@ -9,7 +9,7 @@
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="Name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="Name" placeholder="" value="" required>
+              <input type="text" class="form-control" name="name" id="Name" placeholder="" value="" required>
               <div class="invalid-feedback">
                 Valid  name is required.
               </div>
@@ -17,7 +17,7 @@
 
             <div class="col-sm-6">
               <label for="bandName" class="form-label">Band name</label>
-              <input type="text" class="form-control" id="bandName" placeholder="" value="" required>
+              <input type="text" class="form-control" name="band_name" id="bandName" placeholder="" value="" required>
               <div class="invalid-feedback">
                 Valid band name is required.
               </div>
