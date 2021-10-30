@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
- auth()->loginUsingId(1);
-
+Auth::loginUsingId(1);
 Route::get('/', function () {
     return view('welcome');
 });
