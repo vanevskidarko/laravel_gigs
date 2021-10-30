@@ -10,6 +10,13 @@ use App\Models\Gig;
 
 class GigController extends Controller
 {
+    public function index() {
+        
+        $gigs = Gig::all();
+
+        return view('index', ['gigs'=>$gigs]);
+    }
+
     public function create(){
         return view('create');
     }
