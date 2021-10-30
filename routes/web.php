@@ -23,6 +23,4 @@ Route::get('/gigs/create', '\App\Http\Controllers\GigController@create');
 
 Route::post('/gigs', '\App\Http\Controllers\GigController@store');
 
-Route::get('/gigs', function () {
-    return '<h1> All gigs page</h1>';
-})->name('gigs');
+Route::get('/gigs', '\App\Http\Controllers\GigController@index')->name('gigs');
