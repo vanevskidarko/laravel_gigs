@@ -20,12 +20,10 @@
                       @csrf
                       <input type="hidden" name="gig_id" value="{{$gig->id}}">
                       <input type="hidden" name="user_id" value="{{auth()->user()->id}}">
-                        @if (DB::table('attendances')->where('gig_id', $gig->id)->exists())
-                      <button type="submit" class="btn btn-success btn-outline">You are Going</button>
-                            
+                        @if (DB::table('attendances')->where('gig_id', $gig->id)->where('user_id', auth()->user()->id)->exists())
+                      <button type="submit" class="btn btn-success btn-outline">You are Going</button>  
                         @else
-                      <button type="submit" class="btn btn-danger btn-primary">You are Not Going</button>
-                            
+                      <button type="submit" class="btn btn-danger btn-primary">You are Not Going</button>    
                         @endif
                   </form>
                   </div>

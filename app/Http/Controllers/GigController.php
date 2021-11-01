@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Gig;
+use Illuminate\Support\Facades\DB;
+use app\Models\Attendance;
 
 
 
@@ -15,6 +17,8 @@ class GigController extends Controller
         $gigs = Gig::all();
 
         return view('index', ['gigs'=>$gigs]);
+
+
     }
 
     public function create(){
