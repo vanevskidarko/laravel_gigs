@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+auth()->loginUsingId(1);
 
 
 Auth::loginUsingId(1);
