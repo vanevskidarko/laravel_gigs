@@ -13,7 +13,7 @@ class CreateAttendanceTable extends Migration
      */
     public function up()
     {
-        Schema::create('attendance', function (Blueprint $table) {
+        Schema::create('attendances', function (Blueprint $table) {
             $table->unsignedBigInteger('gig_id')->unsigned();
             $table->unsignedBigInteger('user_id')->unsigned();
             $table->foreign('gig_id')->references('id')->on('gigs')->onDelete('cascade');

@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Auth::loginUsingId(5);
+Auth::loginUsingId(4);
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,4 +24,4 @@ Route::post('/gigs', '\App\Http\Controllers\GigController@store');
 
 Route::get('/gigs', '\App\Http\Controllers\GigController@index')->name('gigs');
 
-Route::post('/handle','\App\Http\Controllers\AttendanceController@handle');
+Route::post('/handle', '\App\Http\Controllers\AttendanceController@handle');
